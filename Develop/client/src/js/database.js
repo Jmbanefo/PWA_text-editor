@@ -30,7 +30,8 @@ export const getDb = async () => {console.error('Get content from database');
   const get = await stash.getAll(); 
   await tx.done; 
   console.log("Displayed is all the content from the databade", stash);
-  return get; 
+  return get?.value; 
 }
 
 initdb();
+
