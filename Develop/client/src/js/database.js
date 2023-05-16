@@ -23,7 +23,8 @@ export const putDb = async (content) => {console.log('putDb to the database');
 }
 
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => {console.error('Get content from database');
+export const getDb = async () => {
+  // console.error('Get content from database');
   const teDb = await initdb(); 
   const tx = teDb.transaction('jate', 'readonly'); 
   const stash = tx.objectStore('jate'); 
